@@ -12,6 +12,7 @@ COPY run.sh /run.sh
 RUN chmod 640 /etc/crontabs/root && chmod 755 /run.sh
 
 EXPOSE 514/tcp 514/udp
+ENV LOGFILE_PERM 0640
 ENV RUN_UID 1000
 ENV RUN_GID 1000
 ENV ROTATE_NUM 366
